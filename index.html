@@ -21,16 +21,18 @@
       overflow:hidden;
       color:var(--ink);
       font-family:"Pretendard","Noto Sans KR",Arial,sans-serif;
-      background: linear-gradient(135deg, #ffe8f2 0%, #f8e7f6 48%, #eee5ff 100%);
-      background-attachment: fixed;
+      background:linear-gradient(135deg,#fff1f6 0%,#ffe3ef 52%,#f5e9ff 100%);
     }
     body::before{
-      content:"";
+      content:"♡  ☆  ♡  ☆  ♡  ☆  ♡  ☆  ♡  ☆";
       position:fixed;
       inset:-10%;
-      background:
-        radial-gradient(circle at 20% 18%, rgba(255,255,255,.55), transparent 31%),
-        radial-gradient(circle at 82% 12%, rgba(255,255,255,.30), transparent 28%);
+      white-space:pre-wrap;
+      word-spacing:48px;
+      line-height:120px;
+      font-size:42px;
+      color:rgba(255,255,255,.72);
+      transform:rotate(-8deg);
       pointer-events:none;
     }
     .entry-card{
