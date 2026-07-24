@@ -1,31 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>📦 산출물 폴더로 이동 중…</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>동영상 | 긍정 배터리</title>
+  <style>
+    :root { --ink:#4f4960; --shadow:0 18px 40px rgba(111,91,145,.18); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; min-height:100vh; color:var(--ink);
+      font-family:"Pretendard","Noto Sans KR",Arial,sans-serif;
+      background:linear-gradient(135deg,#ffe8f2 0%,#f8e7f6 48%,#eee5ff 100%);
+      background-attachment:fixed;
+    }
+    .wrap { width:min(1120px,92%); margin:0 auto; padding:34px 0 70px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:28px; }
+    .home-btn { color:var(--ink); text-decoration:none; font-weight:900; padding:12px 18px; border-radius:999px; background:rgba(255,255,255,.94); box-shadow:var(--shadow); }
+    h1 { margin:0; padding:12px 22px; border-radius:999px; font-size:clamp(1.8rem,4vw,3rem); background:rgba(255,255,255,.94); box-shadow:var(--shadow); }
+    .panel { padding:clamp(18px,4vw,38px); border:1px solid rgba(255,255,255,.9); border-radius:30px; background:rgba(255,255,255,.82); backdrop-filter:blur(8px); box-shadow:var(--shadow); }
+    .video-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+    .video-card { overflow:hidden; padding:14px; border-radius:24px; background:rgba(255,255,255,.96); box-shadow:0 12px 26px rgba(91,75,122,.15); }
+    video { display:block; width:100%; max-height:520px; aspect-ratio:16/9; border-radius:17px; background:#26212d; object-fit:contain; }
+    .caption { padding:14px 6px 8px; font-weight:900; text-align:center; word-break:keep-all; }
+    .open-link { display:block; width:max-content; margin:0 auto 5px; padding:9px 15px; border-radius:999px; color:#754f91; background:#f4eaff; text-decoration:none; font-size:.9rem; font-weight:800; }
+    .notice { margin:0 0 20px; padding:13px 16px; border-radius:16px; background:rgba(255,255,255,.9); text-align:center; font-weight:700; line-height:1.6; }
+    @media (max-width:680px) {
+      body { background-attachment:scroll; background-size:auto 100vh; }
+      .topbar { align-items:flex-start; flex-direction:column; }
+      .video-grid { grid-template-columns:1fr; }
+      .panel { border-radius:24px; }
+      video { max-height:460px; }
+    }
+  </style>
 </head>
-<body style="font-family:'Segoe UI','Malgun Gothic',sans-serif;text-align:center;padding:70px 20px;color:#444;background:#faf7ff;">
-  <p style="font-size:1.3em;">📦 산출물 폴더로 이동 중…</p>
-  <p id="fallback" style="display:none;color:#777;line-height:1.7;">
-    이 페이지는 GitHub Pages에 배포된 뒤에 동작합니다.<br>
-    지금은 GitHub 저장소에서 이 폴더를 직접 열어 보세요.
-  </p>
-  <script>
-    (function () {
-      var h = location.hostname;
-      if (h.slice(-10) === '.github.io') {
-        var user = h.split('.')[0];
-        var parts = location.pathname.split('/').filter(Boolean);
-        if (parts[parts.length - 1] === 'index.html') parts.pop();
-        var folder = parts[parts.length - 1];
-        // 프로젝트 페이지(user.github.io/repo/...)면 첫 조각이 저장소 이름
-        var repo = parts.length >= 2 ? parts[0] : user + '.github.io';
-        location.replace('https://github.com/' + user + '/' + repo + '/tree/main/' + folder);
-      } else {
-        document.getElementById('fallback').style.display = 'block';
-      }
-    })();
-  </script>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <a class="home-btn" href="../home.html">← 홈으로</a>
+      <h1>🎥 동영상</h1>
+    </div>
+    <section class="panel">
+      <p class="notice">재생 버튼을 눌러 영상을 볼 수 있어요. 브라우저에서 바로 재생되지 않을 때는 ‘새 창에서 영상 열기’를 눌러주세요.</p>
+      <div class="video-grid">
+        <article class="video-card">
+          <video controls playsinline preload="metadata"><source src="video-1.mp4" type="video/mp4">동영상을 재생할 수 없습니다.</video>
+          <div class="caption">day4_영상.mp4</div>
+          <a class="open-link" href="video-1.mp4" target="_blank" rel="noopener">새 창에서 영상 열기</a>
+        </article>
+        <article class="video-card">
+          <video controls playsinline preload="metadata"><source src="video-2.mp4" type="video/mp4">동영상을 재생할 수 없습니다.</video>
+          <div class="caption">day4_춤추는 영상.mp4</div>
+          <a class="open-link" href="video-2.mp4" target="_blank" rel="noopener">새 창에서 영상 열기</a>
+        </article>
+        <article class="video-card">
+          <video controls playsinline preload="metadata"><source src="video-3.mp4" type="video/mp4">동영상을 재생할 수 없습니다.</video>
+          <div class="caption">포실이의 이야기.mp4</div>
+          <a class="open-link" href="video-3.mp4" target="_blank" rel="noopener">새 창에서 영상 열기</a>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
