@@ -1,0 +1,29 @@
+:root { --navy:#08172c;--cream:#fff8e9;--yellow:#ffd447;--blue:#29a9ff;--red:#ff4f55; }
+* { box-sizing:border-box; }
+body { margin:0;min-height:100vh;color:var(--cream);font-family:"Noto Sans KR",sans-serif;background:radial-gradient(circle at 50% -20%,#24587d 0,transparent 45%),repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 2px,transparent 2px 8px),var(--navy); }
+button { font:inherit; }
+.game-shell { width:min(1080px,96vw);margin:auto;padding:22px 0 40px; }
+header { display:flex;align-items:end;justify-content:space-between;margin-bottom:14px; }
+.eyebrow { color:var(--yellow);font-size:11px;font-weight:900;letter-spacing:.25em;margin:0 0 2px; }
+h1 { margin:0;font-family:"Black Han Sans",sans-serif;font-weight:400;font-size:clamp(28px,5vw,48px);letter-spacing:-.04em; }
+h1 span { color:var(--yellow); }
+.icon-btn { border:1px solid #49617c;color:#b9cbe0;background:#10233c;border-radius:99px;padding:9px 13px;cursor:pointer; }
+.scoreboard { display:grid;grid-template-columns:1fr 130px 1fr;align-items:stretch;background:#071120;border:2px solid #29405d;border-radius:14px 14px 0 0;overflow:hidden; }
+.team { display:flex;gap:18px;align-items:center;padding:10px 18px;font-weight:900;font-size:18px; }
+.team strong { font:36px "Black Han Sans"; }.team.you { color:var(--blue); }.team.cpu { justify-content:flex-end;color:var(--red); }
+.inning-box { text-align:center;background:#17304d;padding:7px;font-weight:900; }.inning-box>span { display:block;font-size:14px; }
+.bases { width:44px;height:24px;position:relative;margin:3px auto 0; }.bases i { position:absolute;width:10px;height:10px;background:#60758c;border:1px solid #9aabba;transform:rotate(45deg); }
+#base2 { left:17px;top:0 } #base3 { left:6px;top:11px } #base1 { right:6px;top:11px }.bases i.on { background:var(--yellow);box-shadow:0 0 8px var(--yellow); }
+.play-card { position:relative;border:2px solid #29405d;border-top:0;background:#123;box-shadow:0 24px 80px #0008; }
+canvas { width:100%;display:block;aspect-ratio:16/9;touch-action:none; }
+.count-board { position:absolute;top:14px;left:14px;display:flex;gap:7px;padding:7px 10px;border-radius:8px;background:#06101dcc;font-size:13px;letter-spacing:.08em; }
+.count-board span:nth-child(1) b { color:#63d98a }.count-board span:nth-child(2) b { color:var(--yellow) }.count-board span:nth-child(3) b { color:var(--red) }
+.message { position:absolute;left:50%;top:14px;transform:translateX(-50%);max-width:60%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:8px 18px;background:#07111de8;border:1px solid #688099;border-radius:99px;font-weight:900;font-size:14px; }
+.controls { min-height:88px;padding:14px;background:#10233b;border:2px solid #29405d;border-top:0;border-radius:0 0 14px 14px;display:flex;justify-content:center;align-items:center; }
+.control-group { width:100%;display:flex;align-items:center;justify-content:center;gap:12px }.hidden { display:none!important }
+button { transition:transform .12s,filter .12s,background .12s }button:hover { filter:brightness(1.12) }button:active { transform:translateY(2px) scale(.98) }
+.action { border:0;min-width:160px;padding:14px 22px;border-radius:9px;cursor:pointer;font-weight:900;color:white;box-shadow:inset 0 -3px #0004 }.action.primary { background:var(--red) }.action.secondary { background:#2878b8 }
+.pitch-types { display:flex;gap:7px;padding-right:16px;border-right:1px solid #36506d }.pitch-types button { border:1px solid #4c6580;background:#172f4a;color:#c9d7e6;padding:10px 15px;border-radius:7px;cursor:pointer }.pitch-types button.selected { color:#071120;border-color:var(--yellow);background:var(--yellow);font-weight:900 }
+.field-help { color:#c7d7e7;font-size:14px }.field-help strong { color:var(--yellow);font-size:20px }.tip { text-align:center;color:#8094aa;font-size:12px }kbd { display:inline-block;border:1px solid #52667e;border-bottom-width:3px;border-radius:4px;padding:1px 5px;color:#b9c9d9 }
+@media(max-width:600px){.game-shell{width:100%;padding-top:10px}header{padding:0 12px}.scoreboard,.play-card,.controls{border-left:0;border-right:0;border-radius:0}.scoreboard{grid-template-columns:1fr 90px 1fr}.team{padding:7px 10px;gap:8px;font-size:13px}.team strong{font-size:27px}.message{max-width:72%;top:auto;bottom:12px;font-size:12px}.count-board{top:8px;left:8px}.controls{min-height:118px}.control-group{flex-wrap:wrap;gap:8px}.action{min-width:130px;padding:12px 15px}.pitch-types{width:100%;border:0;padding:0;justify-content:center}.pitch-types button{padding:8px 11px}.field-help{padding:0 12px;text-align:center}}
+
