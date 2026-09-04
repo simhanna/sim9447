@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>?숇꽕 ?쇨뎄 梨뷀뵾?몄떗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header>
+      <div><p class="eyebrow">3 INNING QUICK MATCH</p><h1>?숇꽕 ?쇨뎄 <span>梨뷀뵾?몄떗</span></h1></div>
+      <button id="soundBtn" class="icon-btn" aria-label="?뚮━ 耳쒓린/?꾧린">??ON</button>
+    </header>
+    <section class="scoreboard" aria-label="?먯닔??>
+      <div class="team you"><span>BLUE</span><strong id="userScore">0</strong></div>
+      <div class="inning-box"><span id="halfLabel">1??珥?/span><div class="bases" aria-label="踰좎씠???곹솴"><i id="base2"></i><i id="base3"></i><i id="base1"></i></div></div>
+      <div class="team cpu"><strong id="cpuScore">0</strong><span>RED</span></div>
+    </section>
+    <section class="play-card">
+      <canvas id="game" width="960" height="540" aria-label="?쇨뎄 寃쎄린 ?붾㈃"></canvas>
+      <div class="count-board"><span>B <b id="balls">0</b></span><span>S <b id="strikes">0</b></span><span>O <b id="outs">0</b></span></div>
+      <div id="message" class="message">?뚮젅??蹂?</div>
+    </section>
+    <section id="controls" class="controls">
+      <div id="batControls" class="control-group"><button id="pitchBtn" class="action secondary">怨듭쓣 湲곕떎由ш린</button><button id="swingBtn" class="action primary">?ㅼ쐷!</button></div>
+      <div id="pitchControls" class="control-group hidden">
+        <div class="pitch-types"><button data-pitch="吏곴뎄" class="selected">吏곴뎄</button><button data-pitch="而ㅻ툕">而ㅻ툕</button><button data-pitch="泥댁씤吏??>泥댁씤吏??/button></div>
+        <button id="throwBtn" class="action primary">?ш뎄 ?쒖옉</button>
+      </div>
+      <div id="fieldControls" class="control-group field-help hidden"><strong>?섎퉬!</strong> 留덉슦?ㅒ룻꽣移??먮뒗 諛⑺뼢?ㅻ줈 湲?щ툕瑜?怨??꾨옒濡??대룞?섏꽭??</div>
+      <button id="restartBtn" class="action primary hidden">?ㅼ떆 寃쎄린?섍린</button>
+    </section>
+    <p class="tip"><kbd>SPACE</kbd> ?ㅼ쐷/?ш뎄 쨌 <kbd>????????/kbd> 議곗?/?섎퉬</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
+
